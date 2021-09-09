@@ -1,0 +1,123 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    font-family:'Chilanka', cursive;
+    font-size:17px;
+    font-weight: bold;
+    line-height:1.6;
+    text-align: center;
+    text-decoration: none;
+}
+
+h1.heading{
+    font-size:50px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+h1.connection{
+    text-align: left;
+    background-color: black;
+    color: white;
+    font-size:17px;
+}
+
+button, a.admin{
+    font-family:'Chilanka', cursive;
+    font-size:17px;
+    font-weight: bold;
+    line-height:1.6;
+    color: black;
+    text-decoration: none;
+    float: left;
+    margin-top: -70px;
+    border:black 1px solid;
+    padding: 3px 3px;
+    border-radius:10px;
+    background: white;
+}
+a.admin{
+    margin-left: 80px;
+}
+/*label{*/
+/*    font-size: 20px;*/
+/*}*/
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav{
+    flex: 1;
+    text-align: center;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+    padding:10px 10px;
+}
+
+a.menu{
+    text-decoration: none;
+    color: black;
+    margin-top: -100px;
+
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+.categories{
+    margin: 70px 0;
+}
+label{
+    font-size: 20px;
+}
+input[type=text], select, textarea {
+    font-size: 20px;
+    font-family:'Chilanka', cursive;
+    width: 60%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=submit] {
+    font-family:'Chilanka', cursive;
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+input[type=submit]:hover {
+    font-family:'Chilanka', cursive;
+    font-size: 20px;
+
+}
+
+.container {
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 17px;
+
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1 class="heading">LivingInStyle | Home Design</h1>
+    <h1 class="connection">Connected as: <%= email %></h1>
+    <link href="/homeStyle.css" rel="stylesheet" type="text/css">
+    <form action="/logout" method="GET">
+        <button>Logout</button>
+    </form>
+    <% if(email === "admin") { %>
+        <a href="/admin" class="admin">ADMIN</a>
+    <% } %>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="/store" class="menu">HOME</a></li>
+                        <li><a href="/top" class="menu">TOP 5</a></li>
+                        <li><a href="/recommendation" class="menu">RECOMMENDATION</a></li>
+                        <li><a href="/account" class="menu">ACCOUNT</a></li>
+                        <li><a href="/giftcard" class="menu">GIFT CARD</a></li>
+                        <li><a href="/contact" class="menu">CONTACT US</a></li>
+                        <li><a href="/cart" class="menu">CART</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div><br>
+    <h1 class="mini-heading">TOP 5 PRODUCTS YOU MUST TO HAVE...</h1>
+    <div class="categories">
+        <div class="row">
+            <div class="col">
+                <img src="/armchair.jpg" class="product" id="armchair"><br>
+                <div class="product" id="armchair">armchair</div>
+                <div class="product" id="armchair">150$</div><br><br><br>
+                <button class="product" type="submit" id="armchair"
+                        onclick="addToCart('armchair'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/golden shelf.jpg" class="product" id="golden shelf"><br>
+                <div class="product" id="golden shelf">golden shelf</div>
+                <div class="product" id="golden shelf">70$</div><br><br><br>
+                <button class="product" type="submit" id="golden shelf"
+                        onclick="addToCart('golden shelf'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/bamboo ladder.png" class="product" id="bamboo     ladder"><br>
+                <div class="product" id="bamboo ladder">bambuk ladder</div>
+                <div class="product" id="bamboo ladder">33$</div><br><br><br>
+                <button class="product" type="submit" id="bamboo ladder"
+                        onclick="addToCart('bamboo ladder'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/chandelier.jpg" class="product" id="chandelier"><br>
+                <div class="product" id="chandelier">chandelier</div>
+                <div class="product" id="chandelier">80$</div><br><br><br>
+                <button class="product" type="submit" id="chandelier"
+                        onclick="addToCart('chandelier'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/tables set.jpg" class="product" id="tables set"><br>
+                <div class="product" id="tables set">tables set</div>
+                <div class="product" id="tables set">100$</div><br><br><br>
+                <button class="product" type="submit" id="tables set"
+                        onclick="addToCart('tables set'); return false"> ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+    <link href="/top.css" rel="stylesheet" type="text/css">
+</body>
+</html>

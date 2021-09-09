@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "613247e3a09f5258e0a9801d"
+  },
+  "cart": [],
+  "login": [
+    "3.9.2021 - 19:6:3"
+  ],
+  "logout": [
+    "3.9.2021 - 19:6:9"
+  ],
+  "purchases": [],
+  "email": "admin",
+  "password": "$2a$10$qLrppH3EhOOZCJaSXRaWE./rwVrh.HWdAhBj2dcF9N6Ng/ja8fAte",
+  "admin": true,
+  "wallet": 0,
+  "__v": 0
+}]

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1 class="heading">LivingInStyle | Home Design</h1>
+    <h1 class="connection">Connected as: <%= email %></h1>
+    <link href="/homeStyle.css" rel="stylesheet" type="text/css">
+    <form action="/logout" method="GET">
+        <button>Logout</button>
+    </form>
+    <% if(email === "admin") { %>
+        <a href="/admin" class="admin">ADMIN</a>
+    <% } %>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="/store" class="menu">HOME</a></li>
+                        <li><a href="/top" class="menu">TOP 5</a></li>
+                        <li><a href="/recommendation" class="menu">RECOMMENDATION</a></li>
+                        <li><a href="/account" class="menu">ACCOUNT</a></li>
+                        <li><a href="/giftcard" class="menu">GIFT CARD</a></li>
+                        <li><a href="/contact" class="menu">CONTACT US</a></li>
+                        <li><a href="/cart" class="menu">CART</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div><br>
+    <br><h1 class="mini-heading">WHAT OTHERS THINK OF US?
+        <i class="fa fa-thumbs-up" style="font-size:36px"></i></h1>
+    <div class="row">
+        <div class="card">
+            <div class="cart-header">
+                <h2>Michal Keiserman <br>
+                    <i class="fa fa-heart" style="font-size:36px;"></i>
+                </h2>
+            </div>
+                    <div class="card-body">
+                       <p>"Liked the products high quality!! definitely will recommend
+                           to my friends and family!"</p>
+                    </div>
+        </div>
+        <div class="card">
+            <div class="cart-header">
+                <h2>Erez Vadmani <br>
+                    <i class="fa fa-heart" style="font-size:36px;"></i></h2>
+            </div>
+            <div class="card-body">
+                <p>"Wow!!! such a nice shopping experience! definitely will shop again!"</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cart-header">
+                <h2>Mickey Kianovsky <br>
+                    <i class="fa fa-heart" style="font-size:36px;"></i></h2>
+            </div>
+            <div class="card-body"
+                <p>"Got the best experience with your customer support! keep up the good work!"</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cart-header">
+                <h2>Roberta Kaner <br>
+                    <i class="fa fa-heart" style="font-size:36px;"></i></h2>
+            </div>
+            <div class="card-body">
+                <p>"Really liked the website content! makes you want to buy more and more..."</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cart-header">
+                <h2>Ido Yael <br>
+                    <i class="fa fa-heart" style="font-size:36px;"></i></h2>
+            </div>
+            <div class="card-body">
+                <p>"Best quality of products out there!! everything is exactly like it is in the photos and beyond!"</p>
+            </div>
+        </div>
+    </div>
+    <link href="/recommendation.css" rel="stylesheet" type="text/css">
+</body>
+</html>
+
+
+
+
+
+
+

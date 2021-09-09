@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header id="store">
+    <h1 class="heading">LivingInStyle | Home Design</h1>
+    <h1 class="connection">Connected as: <%= email %></h1>
+    <link href="/homeStyle.css" rel="stylesheet" type="text/css">
+    <form action="/logout" method="GET">
+        <button>Logout</button>
+    </form>
+    <% if(email === "admin") { %>
+        <a href="/admin" class="admin">ADMIN</a>
+    <% } %>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="/store" class="menu">HOME</a></li>
+                        <li><a href="/top" class="menu">TOP 5</a></li>
+                        <li><a href="/recommendation" class="menu">RECOMMENDATION</a></li>
+                        <li><a href="/account" class="menu">ACCOUNT</a></li>
+                        <li><a href="/giftcard" class="menu">GIFT CARD</a></li>
+                        <li><a href="/contact" class="menu">CONTACT US</a></li>
+                        <li><a href="/cart" class="menu">CART</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <hr> <br><br>
+    </div>
+    <h1 style="font-size: 40px;text-decoration: underline">USERS INFORMATION</h1>
+    <div class="cart_table">
+        <table>
+            <tr class="row">
+                <th>USER</th>
+                <th>LOGIN ACTIVITY</th>
+                <th>LOGOUT ACTIVITY</th>
+                <th>CART ACTIVITY</th>
+            </tr>
+            <% for(let i = 0; i < users.length; i++) { %>
+            <tr>
+                <td><%=users[i].email%></td>
+                <td><%=users[i].login%></td>
+                <td><%=users[i].logout%></td>
+                <td>
+                <% for(let j = 0; j < users[i].cart.length; j++) { %>
+                    <%=users[i].cart[j].name%> X <%=users[i].cart[j].quantity%>
+                <% } %> </td>
+            </tr>
+            <% } %>
+        </table>
+    </div>
+    <a href="/messages" style="font-size:20px;color:black" class="msg">MESSAGES<i class="fa fa-envelope" style="font-size:30px; color:black"></i></a>
+    <link href="/admin.css" class="msg" rel="stylesheet" type="text/css">
+</header>
+</body>
+</html>

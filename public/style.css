@@ -1,0 +1,76 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    font-family:'Chilanka', cursive;
+    font-size:17px;
+    color: white;
+    font-weight: bold;
+    line-height:1.6;
+    text-align: center;
+    text-decoration: none;
+}
+
+#showcase{
+    background-image:url('/login_register_img.jpg');
+    background-size:cover;
+    background-position: center;
+    position: relative;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding:0 20px;
+}
+#showcase h1{
+    font-size:100px;
+}
+
+#showcase .button{
+    font-family:'Chilanka', cursive;
+    font-weight: bold;
+    font-size:18px;
+    background-color: white;
+    text-decoration:none;
+    color:saddlebrown;
+    border:white 1px solid;
+    padding: 1px 1px;
+    border-radius:10px;
+}
+#showcase .email{
+    background-color: white;
+    color:saddlebrown;
+}
+
+#showcase .password{
+    background-color: white;
+    color:saddlebrown;
+}
+
+#showcase .input-group .text{
+    color: saddlebrown;
+    background-color: white;
+    border:white 1px solid;
+    border-radius:10px;
+    padding: 1px 1px;
+}
+
+a:link, a:visited{
+    color: saddlebrown;
+    background-color: white;
+    border:white 1px solid;
+    border-radius:10px;
+    padding: 1px 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+

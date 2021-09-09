@@ -1,0 +1,129 @@
+[{
+  "_id": {
+    "$oid": "612e38911281eeb3812c315c"
+  },
+  "name": "chair",
+  "price": 100,
+  "photo": "/chair.jpg",
+  "quantity": 15
+},{
+  "_id": {
+    "$oid": "612e38da1281eeb3812c315e"
+  },
+  "name": "bowl",
+  "price": 15,
+  "photo": "/bowl.jpg",
+  "quantity": 66
+},{
+  "_id": {
+    "$oid": "612e394c1281eeb3812c3160"
+  },
+  "name": "bamboo ladder",
+  "price": 33,
+  "photo": "/bamboo ladder.png",
+  "quantity": 20
+},{
+  "_id": {
+    "$oid": "6130f4f51281eeb3812c31fe"
+  },
+  "name": "mirror",
+  "price": 45,
+  "photo": "/mirror.jpg",
+  "quantity": 39
+},{
+  "_id": {
+    "$oid": "6130f5b91281eeb3812c3200"
+  },
+  "name": "armchair",
+  "price": 150,
+  "photo": "/armchair.jpg",
+  "quantity": 62
+},{
+  "_id": {
+    "$oid": "613245911281eeb3812c321a"
+  },
+  "name": "raten set",
+  "price": 130,
+  "photo": "/raten set.jpg",
+  "quantity": 22
+},{
+  "_id": {
+    "$oid": "613245bc1281eeb3812c321b"
+  },
+  "name": "pamps",
+  "price": 10,
+  "photo": "/pamps.jpg",
+  "quantity": 51
+},{
+  "_id": {
+    "$oid": "613245ed1281eeb3812c321c"
+  },
+  "name": "planet set",
+  "price": 50,
+  "photo": "/planet set.jpg",
+  "quantity": 60
+},{
+  "_id": {
+    "$oid": "613246121281eeb3812c321d"
+  },
+  "name": "pillow",
+  "price": 12,
+  "photo": "/pillow.jpg",
+  "quantity": 150
+},{
+  "_id": {
+    "$oid": "6132464f1281eeb3812c321e"
+  },
+  "name": "stool set",
+  "price": 50,
+  "photo": "/stool set.jpg",
+  "quantity": 83
+},{
+  "_id": {
+    "$oid": "6132466e1281eeb3812c321f"
+  },
+  "name": "chandelier",
+  "price": 80,
+  "photo": "/chandelier.jpg",
+  "quantity": 22
+},{
+  "_id": {
+    "$oid": "6132468b1281eeb3812c3220"
+  },
+  "name": "makrame",
+  "price": 20,
+  "photo": "/makrame.jpg",
+  "quantity": 19
+},{
+  "_id": {
+    "$oid": "613246b91281eeb3812c3221"
+  },
+  "name": "black shelf",
+  "price": 70,
+  "photo": "/black shelf.jpg",
+  "quantity": 8
+},{
+  "_id": {
+    "$oid": "613246cd1281eeb3812c3222"
+  },
+  "name": "lamp",
+  "price": 30,
+  "photo": "/lamp.jpg",
+  "quantity": 200
+},{
+  "_id": {
+    "$oid": "613246ec1281eeb3812c3223"
+  },
+  "name": "golden shelf",
+  "price": 70,
+  "photo": "/golden shelf.jpg",
+  "quantity": 33
+},{
+  "_id": {
+    "$oid": "613247371281eeb3812c3224"
+  },
+  "name": "tables set",
+  "price": 100,
+  "photo": "/tables set.jpg",
+  "quantity": 17
+}]

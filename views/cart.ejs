@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1 class="heading">LivingInStyle | Home Design</h1>
+<h1 class="connection">Connected as: <%= email %></h1>
+<form action="/logout" method="GET">
+    <button>Logout</button>
+</form>
+<% if(email === "admin") { %>
+    <a href="/admin" class="admin">ADMIN</a>
+<% } %>
+<div class="container">
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="/store" class="menu">HOME</a></li>
+                <li><a href="/top" class="menu">TOP 5</a></li>
+                <li><a href="/recommendation" class="menu">RECOMMENDATION</a></li>
+                <li><a href="/account" class="menu">ACCOUNT</a></li>
+                <li><a href="/giftcard" class="menu">GIFT CARD</a></li>
+                <li><a href="/contact" class="menu">CONTACT US</a></li>
+                <li><a href="/cart" class="menu">CART</a></li>
+            </ul>
+        </nav>
+    </div>
+</div><br>
+<h1 style="font-size: 40px;text-decoration: underline">
+    <% if(cart.length == 0) { %>
+        CART IS EMPTY!
+    <% } else { %>
+        SHOPPING CART
+        <i class="fa fa-shopping-cart"></i></h1> <br><br>
+<div class="cart_table">
+    <table>
+        <tr class="row">
+            <th>PRODUCT</th>
+            <th>QUANTITY</th>
+            <th>PRICE</th>
+            <th>SUB TOTAL</th>
+            <th></th>
+        </tr>
+        <div class="item_table">
+            <% let total = 0; %>
+            <% for(let i = 0; i < cart.length; i++) { %>
+                <tr>
+                    <td>
+                        <img src="<%- cart[i].photo %>">
+                    </td>
+                    <td>
+                        <%- cart[i].quantity; %>
+                    </td>
+                    <td>
+                        <%- cart[i].price + "$"; %>
+                    </td>
+                    <td>
+                        <%- cart[i].price * cart[i].quantity + "$"; %>
+                        <% total += cart[i].price * cart[i].quantity; %>
+                    </td>
+                    <td>
+                        <form action="http://localhost:5000/removeFromCart/<%=cart[i].name%>" method="POST" style="margin-top: 100px">
+                            <div>
+                                <button>Remove</button>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+            <% } %>
+            <p class="total"> TOTAL: <%=total + "$"%> </p>
+        </div>
+    </table>
+</div>
+<a href="/checkout" class="checkout">CHECKOUT</a>
+<% } %>
+<link href="/cart.css" rel="stylesheet" type="text/css">
+</body>
+</html>

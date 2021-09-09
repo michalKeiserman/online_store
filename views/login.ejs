@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+    </style>
+</head>
+<body>
+<header id="showcase">
+    <h1>Login</h1>
+    <form name="loginForm" id="loginForm">
+        <div class="input-group">
+            <label for="email" class="text">eMail:</label><br>
+            <input type="text" id="email" name="email" required>
+        </div>
+        <div class="input-group">
+            <label for="password" class="text">Password:</label><br>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <br>
+        <div>
+            <label for="showPass" class="button">Show Password</label>
+            <input type="checkbox" id="checkbox" name="checkbox"
+                   onclick="showPassword()">
+        </div>
+        <div>
+            <label for="rememberMe" class="button">Remember Me?</label>
+            <input type="checkbox" id="remember" name="remember"
+                   onclick="rememberMeFunction()">
+        </div>
+        <br>
+        <div>
+            <input type="submit"
+                   id="go" class="button" name="Login"
+                   onclick="validateEmailAndPassword(document.loginForm.email,
+                   document.loginForm.password); return false">
+        </div>
+        <br>
+    </form>
+    <a href="/register">Not registered? Click here to register </a>
+    <script src="login.js"></script>
+    <link href="/style.css" rel="stylesheet" type="text/css">
+</header>
+</body>
+
+</html>
+

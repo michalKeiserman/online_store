@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+    </style>
+</head>
+<body>
+<h1 class="heading">LivingInStyle | Home Design</h1>
+<h1 class="connection">Connected as: <%= email %></h1>
+<link href="/homeStyle.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<form action="/logout" method="GET">
+    <button>Logout</button>
+</form>
+<% if(email === "admin") { %>
+    <a href="/admin" class="admin">ADMIN</a>
+<% } %>
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="/store" class="menu">HOME</a></li>
+                    <li><a href="/top" class="menu">TOP 5</a></li>
+                    <li><a href="/recommendation" class="menu">RECOMMENDATION</a></li>
+                    <li><a href="/account" class="menu">ACCOUNT</a></li>
+                    <li><a href="/giftcard" class="menu">GIFT CARD</a></li>
+                    <li><a href="/contact" class="menu">CONTACT US</a></li>
+                    <li><a href="/cart" class="menu">CART</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<i class="fa fa-user" style="font-size:150px"></i>
+<div class="table">
+    <table>
+        <tr class="row">
+            <th>USER CONNECTED:</th>
+            <th>WALLET CASH:</th>
+        </tr>
+    </table>
+</div>
+<div class="mail">
+    <td> <%= email %></td>
+</div>
+<div class="money">
+    <td> <%= wallet %></td>
+</div>
+<p style="text-decoration: underline">WANT TO CHANGE PASSWORD?</p>
+<div class="cart_table">
+    <table>
+        <form onsubmit="return changePassword();">
+        <tr>
+            <th>
+                <input type="password" id="password" placeholder="Enter new password.." required><br>
+            </th>
+            <th>
+                <label for="showPass" class="button">Show Password</label>
+                <input type="checkbox" id="checkbox" name="checkbox"
+                       onclick="showPassword()">
+            </th>
+            <th>
+                <input type="submit" value="Submit">
+            </th>
+        </tr>
+        </form>
+    </table>
+</div>
+
+<link href="/account.css" rel="stylesheet" type="text/css">
+<script src="account.js"></script>
+</body>
+</html>

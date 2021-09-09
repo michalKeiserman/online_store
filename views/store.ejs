@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+    </style>
+    <script src="store.js" async></script>
+</head>
+<body>
+<header id="store">
+    <h1 class="heading">LivingInStyle | Home Design</h1>
+    <h1 class="connection">Connected as: <%= email %></h1>
+    <link href="/homeStyle.css" rel="stylesheet" type="text/css">
+    <form action="/logout" method="GET">
+        <button>Logout</button>
+    </form>
+    <% if(email === "admin") { %>
+        <a href="/admin" class="admin">ADMIN</a>
+    <% } %>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="/store" class="menu">HOME</a></li>
+                        <li><a href="/top" class="menu">TOP 5</a></li>
+                        <li><a href="/recommendation" class="menu">RECOMMENDATION</a></li>
+                        <li><a href="/account" class="menu">ACCOUNT</a></li>
+                        <li><a href="/giftcard" class="menu">GIFT CARD</a></li>
+                        <li><a href="/contact" class="menu">CONTACT US</a></li>
+                        <li><a href="/cart" class="menu">CART</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <hr> <br><br>
+    </div>
+    <input id="searchbar" onkeyup="search()" type="text"
+                name="search" placeholder="Search...">
+    <div class="categories">
+        <div class="row">
+            <div class="col">
+                <img src="/armchair.jpg" class="product" id="armchair"><br>
+                <div class="product" id="armchair">armchair</div>
+                <div class="product" id="armchair">150$</div><br><br><br>
+                <button class="product" type="submit" id="armchair"
+                        onclick="addToCart('armchair'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/mirror.jpg" class="product" id="mirror"><br>
+                <div class="product" id="mirror">mirror</div>
+                <div class="product" id="mirror">45$</div><br><br><br>
+                <button class="product" type="submit" id="mirror" onclick="addToCart('mirror'); return false">
+                    ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/bamboo ladder.png" class="product" id="bamboo ladder"><br>
+                <div class="product" id="bamboo ladder">bamboo ladder</div>
+                <div class="product" id="bamboo ladder">33$</div><br><br><br>
+                <button class="product" type="submit" id="bamboo ladder"
+                        onclick="addToCart('bamboo ladder'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/raten set.jpg" class="product" id="raten set"><br>
+                <div class="product" id="raten set">raten set</div>
+                <div class="product" id="raten set">130$</div><br><br><br>
+                <button class="product" type="submit" id="raten set"
+                        onclick="addToCart('raten set'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/bowl.jpg" class="product" id="bowl"><br>
+                <div class="product" id="bowl">bowl</div>
+                <div class="product" id="bowl">15$</div><br><br><br>
+                <button class="product" type="submit" id="bowl" onclick="addToCart('bowl'); return false">
+                    ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/pamps.jpg" class="product" id="pamps"><br>
+                <div class="product" id="pamps">pamps</div>
+                <div class="product" id="pamps">10$</div><br><br><br>
+                <button class="product" type="submit" id="pamps"
+                        onclick="addToCart('pamps'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/planet set.jpg" class="product" id="planet set"><br>
+                <div class="product" id="planet set">planet set</div>
+                <div class="product" id="planet set">50$</div><br><br><br>
+                <button class="product" type="submit" id="planet set"
+                        onclick="addToCart('planet set'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/pillow.jpg" class="product" id="pillow"><br>
+                <div class="product" id="pillow">pillow</div>
+                <div class="product" id="pillow">12$</div><br><br><br>
+                <button class="product" type="submit" id="pillow"
+                        onclick="addToCart('pillow'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/stool set.jpg" class="product" id="stool set"><br>
+                <div class="product" id="stool set">stool set</div>
+                <div class="product" id="stool set">50$</div><br><br><br>
+                <button class="product" type="submit" id="stool set"
+                        onclick="addToCart('stool set'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/chandelier.jpg" class="product" id="chandelier"><br>
+                <div class="product" id="chandelier">chandelier</div>
+                <div class="product" id="chandelier">80$</div><br><br><br>
+                <button class="product" type="submit" id="chandelier"
+                        onclick="addToCart('chandelier'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/makrame.jpg" class="product" id="makrame"><br>
+                <div class="product" id="makrame">makrame</div>
+                <div class="product" id="makrame">20$</div><br><br><br>
+                <button class="product" type="submit" id="makrame"
+                        onclick="addToCart('makrame'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/black shelf.jpg" class="product" id="black shelf"><br>
+                <div class="product" id="black shelf">black shelf</div>
+                <div class="product" id="black shelf">70$</div><br><br><br>
+                <button class="product" type="submit" id="black shelf"
+                        onclick="addToCart('black shelf'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/lamp.jpg" class="product" id="lamp"><br>
+                <div class="product" id="lamp">lamp</div>
+                <div class="product" id="lamp">30$</div><br><br><br>
+                <button class="product" type="submit" id="lamp"
+                        onclick="addToCart('lamp'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/golden shelf.jpg" class="product" id="golden shelf"><br>
+                <div class="product" id="golden shelf">golden shelf</div>
+                <div class="product" id="golden shelf">70$</div><br><br><br>
+                <button class="product" type="submit" id="golden shelf"
+                        onclick="addToCart('golden shelf'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/tables set.jpg" class="product" id="tables set"><br>
+                <div class="product" id="tables set">tables set</div>
+                <div class="product" id="tables set">100$</div><br><br><br>
+                <button class="product" type="submit" id="tables set"
+                        onclick="addToCart('tables set'); return false"> ADD TO CART</button>
+            </div>
+            <div class="col">
+                <img src="/chair.jpg" class="product" id="chair"><br>
+                <div class="product" id="chair">chair</div>
+                <div class="product" id="chair">100$</div><br><br><br>
+                <button class="product" type="submit" id="chair" onclick="addToCart('chair'); return false">
+                    ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+    <link href="/store.css" rel="stylesheet" type="text/css">
+</header>
+</body>
+</html>

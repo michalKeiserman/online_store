@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="giftcard.js"></script>
+</head>
+<body>
+<header id="store">
+    <h1 class="heading">LivingInStyle | Home Design</h1>
+    <h1 class="connection">Connected as: <%= email %></h1>
+    <link href="/homeStyle.css" rel="stylesheet" type="text/css">
+    <form action="/logout" method="GET">
+        <button>Logout</button>
+    </form>
+    <% if(email === "admin") { %>
+        <a href="/admin" class="admin">ADMIN</a>
+    <% } %>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="/store" class="menu">HOME</a></li>
+                        <li><a href="/top" class="menu">TOP 5</a></li>
+                        <li><a href="/recommendation" class="menu">RECOMMENDATION</a></li>
+                        <li><a href="/account" class="menu">ACCOUNT</a></li>
+                        <li><a href="/giftcard" class="menu">GIFT CARD</a></li>
+                        <li><a href="/contact" class="menu">CONTACT US</a></li>
+                        <li><a href="/cart" class="menu">CART</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div><br>
+    <h1 class="mini-heading">SEND A GIFT TO YOUR LOVED ONES</h1>
+    <img src="/gift.png">
+    <form onsubmit="return giftFunc();">
+        <label for="umail">For:</label><br>
+        <input type="text" id="umail" placeholder="Insert the user's email address..." required><br><br><br>
+        <label for="money">How much?</label><br>
+        <input type="text" id="money" placeholder="Insert amount in dollars..." required><br><br><br>
+        <input type="submit" value="send">
+    </form>
+    <link href="/giftcard.css" rel="stylesheet" type="text/css">
+</header>
+</body>
+</html>
